@@ -24,7 +24,8 @@ export function canReachTargetExperience(
    // 1体力可换算的经验值
    staminaExp = 120,
    // 意外所得经验值
-   extraStaminaExp = 0
+   extraStaminaExp = 0,
+   callback = (startTime: string, endTime: string, expDiff: number, totalExperience: number, days: number, staminaExp: number) => {}
   }
  ) {
   const expDiff = calcExpDiff(currentLevel,currentExp, targetLevel)
@@ -56,7 +57,7 @@ export function canReachTargetExperience(
    const totalExperience = totalStaminaExperience + totalExtraDailyExp + extraStaminaExp
  
    // 判断是否达到目标经验值
-   return logger(startTime, endTime, expDiff, totalExperience, days, staminaExp);
+   return callback(startTime, endTime, expDiff, totalExperience, days, staminaExp);
  }
  
  // 14637761 106
