@@ -7,5 +7,5 @@ export function logger(startTime: string, endTime: string, targetExp: number, to
     ? ret1
     : ret2;
 
-  console.log(result)
+  console.log(result);
 }
