@@ -1,10 +1,10 @@
 {
-  "name": "calcExp",
+  "name": "calc-exp",
   "version": "1.0.0",
-  "description": "",
+  "description": "a tool to calculate the exp needed to reach the target level",
   "main": "index.js",
   "scripts": {
-    "build": "tsc -w",
+    "build": "tsdown",
     "test": "vitest"
   },
   "keywords": [],
@@ -14,6 +14,7 @@
     "typescript": "^5.7.2"
   },
   "devDependencies": {
+    "tsdown": "^0.12.9",
     "vitest": "^2.1.8"
   }
 }
